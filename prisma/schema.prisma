@@ -85,7 +85,7 @@ model Recipe {
 
 model RecipeStep {
   id          String  @id @default(cuid())
-  index       Int
+  order       Int
   description String
   imageUrl    String
   recipe      Recipe? @relation(fields: [recipeId], references: [id])
